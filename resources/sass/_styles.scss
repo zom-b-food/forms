@@ -1,0 +1,155 @@
+@import "variables/variables";
+@import "my-mixins/mixins";
+@import "responsive";
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.page-header {
+  padding-bottom: (($line-height-computed / 2) - 1);
+  margin: 0 auto;
+  border-bottom: 1px solid $page-header-border-color;
+  background: #010511 url('http://www.ui-design-engineering.com/resources/images/ui/banner-orig.jpg') 0px 0px no-repeat;
+
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  -moz-animation: fadein 4s; /* Firefox */
+  -ms-animation: fadein 4s; /* Internet Explorer */
+  -o-animation: fadein 4s; /* Opera */
+  animation: fadein 4s;
+  height: 389px;
+  width: 100%;
+
+}
+
+/* Sticky footer wrapper ------ */
+.container-fluid {
+  width: auto;
+  max-width: 1480px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+
+.container-fluid .text-muted {
+  margin: 20px 0;
+}
+
+
+
+/* Set the fixed height of the footer here */
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e2e1c7;
+  height: 100px;
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#86aecc+0,d4e4ef+100 */
+  background: #000000; /* Old browsers */
+  background: -moz-linear-gradient(top, #000000 0%, #172641 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #000000 0%, #172641 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #000000 0%, #172641 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#172641', GradientType=0); /* IE6-9 */
+  margin-top: 0;
+  i {
+    color: #38444A;
+
+  }
+  .fa-linkedin-square:hover {
+    color: #617e94;
+  }
+  .fa-github-square:hover {
+    color: #617e94;
+  }
+  .fa-facebook-square:hover {
+    color: #617e94;
+  }
+  .copyright {
+    margin-top: 70px;
+    width: auto;
+    float: left;
+    padding-left: 25px;
+    color: #66788b;
+    @include col-md-down() {
+
+    }
+  }
+}
+
+.social {
+  padding-top: 4px;
+  margin-right: 20%;
+  float: right;
+  @include col-md-down() {
+    margin-top: -80px;
+    margin-right: 25%;
+    float: right;
+  }
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+/*
+@media (max-width: 767px) {
+	footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+*/
+
+table.social {
+  display: table;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-left: 1px solid #3e617f;
+  border-bottom: 1px solid #3e617f;
+  border-right: 1px solid #3e617f;
+}
+
+table.social img {
+  padding: 4px;
+}
+
+
+.body-content {
+	max-width: 1240px;
+	padding-top: 6px;
+	position: static;
+	z-index: 1 !important;
+	background-color: transparent;
+}
+
+.clear {
+	clear: both !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	float: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	display: block !important;
+	border: none !important;
+	background: none !important;
+	list-style: none !important;
+	min-height: 0 !important;
+}
+
+ul > li {
+	list-style-image: url(../images/ui/bullet.png);
+	list-style-position: inside;
+	line-height: $li-line-height;
+	margin-left: 4px;
+	padding-bottom: 0.35rem;
+}
